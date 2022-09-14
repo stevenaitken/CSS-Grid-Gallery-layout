@@ -1,0 +1,46 @@
+/* CSS Document */
+html, body {
+    height: 100%;
+    box-sizing: border-box;/* HTMl elements contain any padding and marginsd ands within origiunal element width */
+}
+/*---------------------------gallery styles ----------------------------------*/
+.wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 2em;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 100%;
+}
+/*---------------------------Images styles ----------------------------------*/
+img {
+    width: 100%; /* set the width of the image. Image will take up 100% width of available space */
+    height: auto; /* height will automatically resize based on width */
+    border-radius: 4%;
+}
+/*---------------------------Footer styles ----------------------------------*/
+footer {
+    display: flex;
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center; /* center items horizontally, in this case */
+    box-sizing: border-box;
+    width: 100%; /* set the width of the footer  */
+    height: 15vh; /* set the height of the footer  */
+    color: #fff; /* set the text colour of the footer  */
+    background-color: #0E0E0E;
+    margin-top: 1em;
+}
+/*---------------------------h1 styles ----------------------------------*/
+h1 {
+    padding-left: 5%;
+    color: #9B0104;
+}
+/*-------------------------- media queries --------------------------------------*/
+@media only screen and (max-width:600px) { /* set the following styles while display is no wider than 600px */
+    .wrapper {
+        grid-template-columns: 100%; /* one column grid */
+    }
+    img {
+        border-radius: 0; /* remove rounded corners from images */
+    }
+}
