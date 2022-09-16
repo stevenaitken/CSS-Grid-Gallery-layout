@@ -1,8 +1,5 @@
 /* CSS Document */
-html, body {
-    height: 100%;
-    box-sizing: border-box;/* HTMl elements contain any padding and marginsd ands within origiunal element width */
-}
+
 /*---------------------------gallery styles ----------------------------------*/
 .wrapper {
     display: grid;
@@ -10,7 +7,7 @@ html, body {
     grid-gap: 2em;
     width: 90%;
     margin: 0 auto;
-    min-height: 100%;
+
 }
 /*---------------------------Images styles ----------------------------------*/
 img {
@@ -36,9 +33,20 @@ h1 {
     color: #9B0104;
 }
 /*-------------------------- media queries --------------------------------------*/
+@media only screen and (min-width:600px) and (max-width:900px){
+
+    .wrapper {
+        grid-template-columns: auto auto; /* two column grid */
+    }
+    img {
+        border-radius: 0; /* remove rounded corners from images */
+    }
+}
+
+
 @media only screen and (max-width:600px) { /* set the following styles while display is no wider than 600px */
     .wrapper {
-        grid-template-columns: 100%; /* one column grid */
+        grid-template-columns: auto; /* one column grid */
     }
     img {
         border-radius: 0; /* remove rounded corners from images */
